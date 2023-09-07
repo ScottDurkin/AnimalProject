@@ -2,7 +2,39 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="IndexPg">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-success">Add</button>
+                <button class="btn btn-primary">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in Dogs">
+                        <th>{{item.name}}</th>
+                        <th>{{item.breed}}</th>
+                        <th>{{item.age}}</th>
+                        <th>{{item.weight}}KG</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+@section scripts{
+    <script src="~/js/Index.js"></script>
+}

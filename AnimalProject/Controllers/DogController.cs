@@ -102,6 +102,15 @@ namespace AnimalProject.Controllers
                     Color = "Blue and Tan",
                     Weight = 5.5,
                     IsFriendly = true
+                },
+                new DogObj
+                {
+                    Name = "Polly",
+                    Breed = "Boxer",
+                    Age = 1,
+                    Color = "purple",
+                    Weight = 24,
+                    IsFriendly = true
                 }
             };
             return new JsonResult(dogs);
